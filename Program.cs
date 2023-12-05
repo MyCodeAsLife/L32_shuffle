@@ -13,17 +13,12 @@ namespace L32_shuffle
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 
             Console.WriteLine("Первоначальный вид массива:");
-
-            foreach (var item in numbers)
-                Console.Write(item + " ");
+            WriteArray(numbers);
 
             Shuffle(numbers);
+
             Console.WriteLine("\nВид массива после перемешивания:");
-
-            foreach (var item in numbers)
-                Console.Write(item + " ");
-
-            Console.WriteLine();
+            WriteArray(numbers);
         }
 
         static void Shuffle(int[] numbers)
@@ -45,6 +40,14 @@ namespace L32_shuffle
                     numbers[j] = tempNumber;
                 }
             }
+        }
+
+        static void WriteArray(int[] array)
+        {
+            foreach (var item in array)
+                Console.Write(item + " ");
+
+            Console.WriteLine();
         }
     }
 }
